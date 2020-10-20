@@ -221,8 +221,8 @@ if(t_lim>0)
                 float xO=-VO*cos(angO)*(t+2.5+t_defase)+d;
                 float yO=VO*sin(angO)*(t+2.5+t_defase)-4.905*pow(t+2.5+t_defase,2)+h;
                 if ((sqrt(pow(xD-xO,2)+pow(yO-yD,2))<.025*d)
-                        && (sqrt(pow(xO,2)+pow(yO,2))<.05*d)
-                        &&(sqrt(pow(xD-d,2)+pow(yD-h,2))<.025*d))
+                        && (sqrt(pow(xO,2)+pow(yO,2))>.05*d)
+                        &&(sqrt(pow(xD-d,2)+pow(yD-h,2))>.025*d))
                 {
                     cout <<"la rapidez necesaria para que el canhonaso defensor intersepte al canhonado ofensor es= "
                         << VD <<endl<<"y con un desfase en tiempo iguial a="<<t_defase<<endl;
